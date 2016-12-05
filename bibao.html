@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<div id="test"></div>
+<script>
+createElements();
+//alertMsg();
+function createElements() {
+	var test =document.getElementById("test");
+	for(var i=0;i<10;i++) {
+		var aEle = document.createElement("a");
+		aEle.innerHTML = "test"+i;
+		(function(i) {
+			aEle.onclick = function() {
+	          alert(i + 1);
+	        };
+	     })(i); 
+		var br = document.createElement("br");
+		document.getElementsByTagName("body")[0].appendChild(aEle).appendChild(br);
+	}
+}
+
+function msg(index) {
+	var a = document.getElementsByTagName("a");
+	a[index].onclick = function() {
+		alert(index);
+	}
+}
+function alertMsg() {
+	var a = document.getElementsByTagName("a");
+	for(var i=0;i<a.length;i++) {
+		msg(i);
+	}
+}
+</script>
+</body>
+</html>
