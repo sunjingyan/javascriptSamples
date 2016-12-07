@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+console.log('数列长度定在10');
+function getFibonaqiArray(n) {
+	var fibarr = [];
+	var i = 0;
+	while(i < n) {
+		if(i<=1) {
+		   fibarr.push(i);
+		}else{
+		   fibarr.push(fibarr[i-1] + fibarr[i-2])
+		}
+	  	i++;
+	}
+	console.log(fibarr);
+	return fibarr;
+	
+}
+
+getFibonaqiArray(10);
+
+</script>
+</head>
+<body>
+</body>
+</html>

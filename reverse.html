@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>回文字符串</title>
+<script>
+var str = 'mamam redivider';
+document.write('=== use Array method - reverse() to do =====<br/>');
+document.write(str+'<br/>');
+var str_ = str.split('').reverse();
+document.write(str_+'<br/>');
+var str__ = str_.join('');
+document.write(str__+'<br/>');
+document.write('==== use for loop to do =====<br/>');
+var str1 = '';
+for(var i=str.length-1;i>=0;i--) {
+	str1+=str.charAt(i);
+}
+document.write(str1);
+</script>
+</head>
+<body>
+</body>
+</html>
